@@ -1,0 +1,200 @@
+:root {
+    --main-color: #0cc;
+    --alt-main-color: #099;
+    --alt-color: #0e81ba;
+}
+
+/*  */
+.posts-holder {
+    padding: 20px 60px;
+}
+
+@media(max-width:767px) {
+    .posts-holder {
+        padding: 0 !important;
+    }
+}
+
+.posts-holder .item {
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.posts-holder .item.new::before {
+    content: "new";
+    text-transform: capitalize;
+    display: block;
+    background-color: var(--main-color);
+    color: white;
+    position: absolute;
+    top: 36px;
+    right: 5px;
+    padding: 8px 26px;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.posts-holder .item .hr {
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    background-color: var(--main-color);
+    display: block;
+}
+
+.posts-holder .item .image {
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    background-color: #3085a3;
+}
+
+.posts-holder .item .image:hover img {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+}
+
+.posts-holder .item .image:hover+.heading {
+    color: var(--main-color);
+}
+
+.posts-holder .item .image img {
+    width: calc(100% + 50px);
+    transform: translate3d(-40px, 0, 0);
+    transition: 0.3s;
+    position: relative;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.posts-holder .item .heading {
+    margin: 20px 0;
+    font-size: 23px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--alt-main-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.posts-holder .item .heading:hover {
+    color: var(--main-color);
+}
+
+.posts-holder .item p {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.posts-holder .item .date {
+    display: flex;
+    justify-content: space-between;
+    color: var(--alt-main-color);
+    margin-bottom: 15px;
+}
+
+.posts-holder .item .date span {
+    width: 40%;
+    font-size: 18px;
+}
+
+.posts-holder .item .comments {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #999;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.posts-holder .item .comments span {
+    width: 40%;
+    font-size: 18px;
+}
+
+/* end post holder */
+
+/* start controle */
+.controle {
+    padding: 0 30px;
+    margin: 20px auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@media(max-width:767px) {
+    .controle {
+        flex-direction: column;
+    }
+
+    .controle .controle-b {
+        max-width: 100% !important;
+    }
+}
+
+.controle .controle-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.controle .controle-a button {
+    padding: 12px 32px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+}
+
+.controle .controle-a button.active {
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.3s;
+}
+
+.controle .controle-a button.active:hover {
+    background-color: var(--alt-main-color);
+}
+
+.controle .controle-b {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    max-width: 50%;
+}
+
+.controle .controle-b>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.controle .controle-b>div span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: #999;
+    font-weight: bold;
+}
+
+.controle .controle-b>div span.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* end controle */
